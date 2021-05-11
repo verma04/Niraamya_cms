@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Lato ;
+  src: url('../public/font/Lato-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: Rockwell;
+  src: url('../public/font/ROCK.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+    font-family: Lato  , Sans-serif; 
+}
+
+h3 {
+    font-family: Lato , Sans-serif;
+}
+h2 {
+    font-family:Rockwell;
+}
+p {
+    font-family: Lato , Sans-serif;
+    line-height: 1.3;
+
+    font-size: 1.2rem;
+    word-spacing: 0.2rem;;
+}
+h5 {
+    font-family: Lato , Sans-serif;
+}
+
+select {
+    font-family: Lato , Sans-serif; 
+}
+div {
+    font-family: Lato , Sans-serif; 
+}
+
+span {
+    font-family: Lato , Sans-serif;
+
+}
+li {
+    font-family: Lato , Sans-serif;
+    list-style: none;
+}
+button {
+    font-size: 1.3rem;
+    background: #4E372A;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    font-family: Lato;
+}
+
+input {
+    font-family: Lato;
+}
+
