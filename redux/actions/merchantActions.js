@@ -58,12 +58,10 @@ export const getallCostomers = (userData, history) => dispatch => {
     try {
     const des  = axios.post("/admin/addProducts" , userData )
      
-    await    dispatch({
-          type: PRODUCTS , 
-          payload:  des.data
-        
-    })
+  
     await Router.push("/admin-products")
+
+    await toast.success("Product Added")
   }
 
       catch(err) {
@@ -268,16 +266,21 @@ export const getallCostomers = (userData, history) => dispatch => {
   };
 
 
-  export const  deleteProduct = (data , history) => dispatch => {
- 
-    axios
-    .post("/admin/deleteProduct"  , data)
-    .then(res => 
-      history.push('/admin/products/')
-    )
-    .catch(err =>
-      console.log(err)
-    );
+  export const  deleteProduct = (data , history) => async dispatch => {
+  try {
+
+  
+ const res =  await  axios.post("/admin/deleteProduct"  , data)
+
+      history.push('/admin-products/')
+    
+
+  }
+
+    catch(err){
+
+         console.log(err)
+    }
   };
 
 

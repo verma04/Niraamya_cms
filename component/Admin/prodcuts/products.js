@@ -141,7 +141,7 @@ import Top from '@/component/backtotop/Top'
                    <h2 className="space-right" >Price</h2>
                    </div> */}
 
-                   {product.map((number) =>
+                   {product.reverse().map((number) =>
    <div onClick={() => Router.push(`/admin-products/${number._id}`)}  key ={number._id} className="bar1" >
    <div className="img-wrapper" > <img  alt="ww"  src={number.img1} /> </div>
 <h3 id="set" >{number.productName}</h3>

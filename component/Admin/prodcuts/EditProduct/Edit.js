@@ -7,6 +7,7 @@ import Navbar from '../../dashboard/Navbar'
 import {  convertFromRaw } from 'draft-js';
 import {stateToHTML} from 'draft-js-export-html';
 import Pop from './Pop'
+import Router, { withRouter } from 'next/router'
 import { setAlert , } from '@/redux/actions/alertAction';
 const Editor = dynamic(
   () => {
@@ -86,7 +87,7 @@ class Category extends Component {
         const data = {
             id:this.props.id
         }
-        this.props.deleteProduct(data , this.props.history)
+        this.props.deleteProduct(data , Router)
 
         setTimeout(
             () =>  this.props.setAlert("Product Deleted ", "Added"), 

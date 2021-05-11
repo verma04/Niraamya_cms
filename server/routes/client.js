@@ -163,11 +163,17 @@ function routes(app) {
     
       
     
-  res.json(prodoucts)
+  
     
   console.log(prodoucts)
       
     });
+   
+    Product.find({}).then( category=>{
+      res.json(category)
+   
+   })
+
   });
   });
   

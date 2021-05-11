@@ -19,7 +19,7 @@ class Drawer extends React.Component {
   
     render() {
       const { id, visible } = this.props;
-      const { isAuthenticated } = this.props.auth;
+     
   
       return (
         <div
@@ -49,7 +49,7 @@ class Drawer extends React.Component {
   
     render() {
       const { visible } = this.state;
-  
+      const { isAuthenticated } = this.props.auth;
       return (
         <Draw>
             <div className="flex">
@@ -68,7 +68,7 @@ class Drawer extends React.Component {
           </div>
          
           {(() => {
-        if (isAuthenticated) {
+        if (isAuthenticated === true) {
           return (
             <Drawer id="navigation" visible={visible}>
             <div    onClick={this.onClick.bind(this)} className="popUp" >
@@ -77,9 +77,11 @@ class Drawer extends React.Component {
             <li> <i className="fas fa-home"></i> <a href="/admin-dashboard">Home  </a> </li>
             <li> <i class="fas fa-clipboard-list"></i><a href="/admin-products">Products</a>  </li>
             <li> <i className="fas fa-sort-amount-up-alt"></i> <a href="/admin-orders">Orders </a> </li>
+            <li> <i className="fas fa-file"></i><a href="/admin-pages">Pages</a>  </li>
+           
             <li> <i className="fas fa-users"></i><a href="/admin-costomer">Costomers</a>  </li>
             <li> <i className="fas fa-tags"></i><a href="/admin-coupan">Coupan</a>  </li>
-            <li> <i className="fas fa-file"></i><a href="/admin-bulkorder">Bulk Order</a>  </li>
+            <li> <i className="fas fa-cart-plus"></i><a href="/admin-bulkorder">Bulk Order</a>  </li>
           </ul>
           <ul>
         

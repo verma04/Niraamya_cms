@@ -68,7 +68,7 @@ class Drawer extends React.Component {
           </div>
          
           {(() => {
-        if (isAuthenticated) {
+        if (isAuthenticated === true) {
           return (
             <Drawer id="navigation" visible={visible}>
             <div    onClick={this.onClick.bind(this)} className="popUp" >

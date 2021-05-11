@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Draw} from './Style/Dash'
-import Navbar from './Navbar';
-import { Section } from './Style/Dashboard'
+
+
+import { Section } from './Style'
 import Router, { withRouter } from 'next/router'
   class dashboard extends React.Component {
   
@@ -13,7 +13,7 @@ import Router, { withRouter } from 'next/router'
   
       return (
          <>
-  <Navbar/>
+
           <Section>
             <div className="flex" >
                 
@@ -23,7 +23,7 @@ import Router, { withRouter } from 'next/router'
                     <i className="fas fa-tasks"></i>
                     </div>
                     <div className="data" >
-              <h2>Categories</h2>
+              <h2>Philosophy</h2>
                     </div>
 
                 </div>
